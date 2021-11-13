@@ -15,8 +15,27 @@ class ExploreScreen extends StatefulWidget {
 }
 
 class _ExploreScreenState extends State<ExploreScreen> {
-  final ScrollController scrollController = ScrollController();
   final mockService = MockFooderlichService();
+  final ScrollController _scrollController = ScrollController();
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(_scrollListener);
+  }
+
+  // Challenge task
+  void _scrollListener() {
+    if (_scrollController.offset >=
+            _scrollController.position.maxScrollExtent &&
+        !_scrollController.position.outOfRange) {
+      print('reached the bottom');
+    }
+    if (_scrollController.offset <=
+            _scrollController.position.minScrollExtent &&
+        !_scrollController.position.outOfRange) {
+      print('reached the top!');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +53,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
           //This holds an explicit list of children. In this scenario, the
           //primary ListView will hold the other two ListViews as children.
           return ListView(
+            controller: _scrollController,
             // Set the scroll direction to vertical, although that’s
             //the default value.
             scrollDirection: Axis.vertical,
-            controller: scrollController,
             children: [
               // The first item in children is TodayRecipeListView.
               //You pass in the list of todayRecipes from ExploreData.
