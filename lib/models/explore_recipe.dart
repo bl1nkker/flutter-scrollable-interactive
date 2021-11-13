@@ -11,7 +11,7 @@ class ExploreRecipe {
   String id;
   String cardType;
   String title;
-  String subtitle;
+  String singer;
   String backgroundImage;
   String backgroundImageSource;
   String message;
@@ -31,7 +31,7 @@ class ExploreRecipe {
     required this.id,
     required this.cardType,
     required this.title,
-    this.subtitle = '',
+    this.singer = '',
     this.backgroundImage = '',
     this.backgroundImageSource = '',
     this.message = '',
@@ -68,7 +68,7 @@ class ExploreRecipe {
       id: json['id'] ?? '',
       cardType: json['cardType'] ?? '',
       title: json['title'] ?? '',
-      subtitle: json['subtitle'] ?? '',
+      singer: json['singer'] ?? '',
       backgroundImage: json['backgroundImage'] ?? '',
       backgroundImageSource: json['backgroundImageSource'] ?? '',
       message: json['message'] ?? '',

@@ -42,7 +42,7 @@ class Card2 extends StatelessWidget {
                     right: 16,
                     child: Text(
                       recipe.title,
-                      style: FooderlichTheme.lightTextTheme.headline1,
+                      style: FooderlichTheme.darkTextTheme.headline1,
                     ),
                   ),
                   Positioned(
@@ -51,8 +51,8 @@ class Card2 extends StatelessWidget {
                     child: RotatedBox(
                       quarterTurns: 3,
                       child: Text(
-                        recipe.subtitle,
-                        style: FooderlichTheme.lightTextTheme.headline1,
+                        recipe.singer,
+                        style: FooderlichTheme.darkTextTheme.headline1,
                       ),
                     ),
                   ),

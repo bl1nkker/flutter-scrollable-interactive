@@ -14,7 +14,7 @@ class Fooderlich extends StatelessWidget {
     final theme = FooderlichTheme.light();
     return MaterialApp(
       theme: theme,
-      title: 'Fooderlich',
+      title: 'いくつかのポップミュージック',
       home: const Home(),
     );
   }

@@ -29,7 +29,7 @@ class TodayRecipeListView extends StatelessWidget {
         children: [
           // In the column, add a Text. This is the header for the
           //Recipes of the Day.
-          Text('Recipes of the Day 🍳',
+          Text('Music of the day 🎵',
               style: Theme.of(context).textTheme.headline1),
           // Add a 16-point-tall SizedBox, to supply some padding.
           const SizedBox(height: 16),

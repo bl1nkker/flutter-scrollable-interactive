@@ -2,73 +2,66 @@
     "feed": [
         {
             "id": "1",
-            "profileImageUrl": "assets/profile_pics/person_cesare.jpeg",
-            "comment": "Made this delicious pizza this morning",
+            "profileImageUrl": "assets/profile_pics/person_asat.jpg",
+            "comment": "sheeeeeeeeeeeeesh...",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "10"
         },
         {
             "id": "2",
-            "profileImageUrl": "assets/profile_pics/person_stef.jpeg",
-            "comment": "Made delicious creamy, shrimp black pepper pasta.",
+            "profileImageUrl": "assets/profile_pics/person_danelya.jpg",
+            "comment": "On the radio, when this music is played, I always have some kind of good and light mood.",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "80"
         },
         {
             "id": "3",
-            "profileImageUrl": "assets/profile_pics/person_crispy.png",
-            "comment": "Made a delicious salad today!",
+            "profileImageUrl": "assets/profile_pics/person_igor.jpg",
+            "comment": "I liked this music - it was not mine ...",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "20"
         },
         {
             "id": "4",
-            "profileImageUrl": "assets/profile_pics/person_joe.jpeg",
-            "comment": "Cooked a widget this morning.",
+            "profileImageUrl": "assets/profile_pics/person_ilya.jpg",
+            "comment": "I liked this music - I put on the call.",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "30"
         },
         {
             "id": "5",
-            "profileImageUrl": "assets/profile_pics/person_katz.jpeg",
-            "comment": "Going to power through my day with this nutty smoothie to finish up Flutter apprentice for our readers!",
+            "profileImageUrl": "assets/profile_pics/person_nikita.jpg",
+            "comment": "Cool music is the one that makes you jump.",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "40"
         },
         {
             "id": "6",
-            "profileImageUrl": "assets/profile_pics/person_kevin.jpeg",
-            "comment": "Cooking up some steak 🥩 today, state should be rare, medium or medium well?",
+            "profileImageUrl": "assets/profile_pics/person_senya.jpg",
+            "comment": "My music is my life.",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "50"
         },
         {
             "id": "7",
-            "profileImageUrl": "assets/profile_pics/person_sandra.jpeg",
-            "comment": "Kicking off the morning with mike's green smoothie recipe. Time to edit these chapters!",
+            "profileImageUrl": "assets/profile_pics/person_mark.jpg",
+            "comment": "Music for me is what makes me smile, sad, worry, rejoice, have fun ...",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "50"
         },
         {
             "id": "8",
-            "profileImageUrl": "assets/profile_pics/person_manda.png",
-            "comment": "Not sure where I should travel to eat today.",
+            "profileImageUrl": "assets/profile_pics/person_islam.jpg",
+            "comment": "A new rock group - \"Yankee\" - sings about a new love.",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "60"
         },
         {
             "id": "9",
-            "profileImageUrl": "assets/profile_pics/person_ray.jpeg",
-            "comment": "Hot off the press, cooking up more books this year!",
+            "profileImageUrl": "assets/profile_pics/person_madina.jpg",
+            "comment": "twenty one pilots - i need help...",
             "foodPictureUrl": "card_carrot.png",
             "timestamp": "70"
-        },
-        {
-            "id": "10",
-            "profileImageUrl": "assets/profile_pics/person_tiffani.jpeg",
-            "comment": "Hmmm.... Salmon, little broccoli, mash potatos",
-            "foodPictureUrl": "card_carrot.png",
-            "timestamp": "90"
         }
     ]
 }
