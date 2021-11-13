@@ -5,11 +5,18 @@ import '../components/components.dart';
 import '../models/models.dart';
 import '../api/mock_fooderlich_service.dart';
 
-class ExploreScreen extends StatelessWidget {
+class ExploreScreen extends StatefulWidget {
   // 1
-  final mockService = MockFooderlichService();
 
   ExploreScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ExploreScreen> createState() => _ExploreScreenState();
+}
+
+class _ExploreScreenState extends State<ExploreScreen> {
+  final ScrollController scrollController = ScrollController();
+  final mockService = MockFooderlichService();
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +37,7 @@ class ExploreScreen extends StatelessWidget {
             // Set the scroll direction to vertical, although that’s
             //the default value.
             scrollDirection: Axis.vertical,
+            controller: scrollController,
             children: [
               // The first item in children is TodayRecipeListView.
               //You pass in the list of todayRecipes from ExploreData.
