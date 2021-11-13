@@ -44,12 +44,12 @@ class _HomeState extends State<Home> {
             label: 'Explore',
           ),
           const BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Recipes',
+            icon: Icon(Icons.music_note),
+            label: 'Songs',
           ),
           const BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            label: 'To Buy',
+            label: 'Unnamed',
           ),
         ],
       ),
