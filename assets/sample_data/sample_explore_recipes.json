@@ -43,58 +43,6 @@
             ]
         },
         {
-            "id": "2",
-            "cardType": "card2",
-            "title": "GONE",
-            "singer": "ROSÉ",
-            "backgroundImage": "assets/magazine_pics/card_rose.jpg",
-            "backgroundImageSource": "https://www.foodiesfeed.com/free-food-photo/peanut-butter-and-banana-smoothie/",
-            "message": "Much Tasty, Wow Smooth, Oh Nutty",
-            "authorName": "로제",
-            "role": "가수와 댄서",
-            "profileImage": "assets/profile_pics/person_rose.jpg",
-            "durationInMinutes": 15,
-            "dietType": "Standard",
-            "calories": 136,
-            "tags": ["Drink", "Nuts", "Smooth", "Energy"],
-            "description": "a thick, smooth drink of fresh fruit pureed with milk, yogurt, or ice cream.",
-            "source": "Apple Dictionary",
-            "ingredients": [
-                {
-                    "imageUrl": "food_peanutbutter.png",
-                    "title": "Peanut Butter",
-                    "source": "https://pixabay.com/photos/almond-blue-cook-cooking-egg-fat-1850615/" 
-                },
-                {
-                    "imageUrl": "food_soymilk.png",
-                    "title": "Soy Milk",
-                    "source": "https://pixabay.com/photos/soy-milk-soy-soybean-soy-milk-2263942/"
-                },
-                {
-                    "imageUrl": "food_banana.jpg",
-                    "title": "Banana",
-                    "source": "https://pixabay.com/photos/bananas-fruit-food-fresh-mature-3700718/"
-                }
-            ],
-            "instructions": [
-                {   
-                    "imageUrl": "food_banana.jpg",
-                    "description": "Peel the banana, cut it in half and place it in the blender.",
-                    "durationInMinutes": 1
-                },
-                {   
-                    "imageUrl": "",
-                    "description": "Add two big scoops of peanut butter.",
-                    "durationInMinutes": 1
-                },
-                {   
-                    "imageUrl": "",
-                    "description": "Add 2 cups of almond milk. Depending on the portion you may want to add more milk. You can add any type of milk you want.",
-                    "durationInMinutes": 5
-                }
-            ]
-        },
-        {
             "id": "4",
             "cardType": "card3",
             "title": "Music Trends",
