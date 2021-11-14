@@ -28,13 +28,13 @@ class _HomeState extends State<Home> {
         return Scaffold(
           appBar: AppBar(
             title: Text(
-              'Fooderlich',
+              'いくつかのポップミュージック',
               style: Theme.of(context).textTheme.headline6,
             ),
           ),
           // Displays the correct page widget, based on the current tab index.
           // TODO: Replace body
-          body: pages[tabManager.selectedTab],
+          body: IndexedStack(index: tabManager.selectedTab, children: pages),
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor:
                 Theme.of(context).textSelectionTheme.selectionColor,
@@ -47,8 +47,8 @@ class _HomeState extends State<Home> {
             },
             items: <BottomNavigationBarItem>[
               const BottomNavigationBarItem(
-                icon: Icon(Icons.explore),
-                label: 'Explore',
+                icon: Icon(Icons.music_note),
+                label: 'Music',
               ),
               const BottomNavigationBarItem(
                 icon: Icon(Icons.book),
