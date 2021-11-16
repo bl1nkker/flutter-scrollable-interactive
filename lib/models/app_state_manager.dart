@@ -43,6 +43,7 @@ class AppStateManager extends ChangeNotifier {
   }
 
   void login(String username, String password) {
+    // Also here you can implement backend logic
     // Sets loggedIn to true.
     _loggedIn = true;
     // Notifies all listeners.

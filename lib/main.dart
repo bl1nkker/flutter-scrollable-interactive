@@ -64,7 +64,11 @@ class _FooderlichState extends State<Fooderlich> {
             title: 'Fooderlich',
             home: Router(
               routerDelegate: _appRouter,
-              // TODO: Add backButtonDispatcher
+              // Here, you set the router widget’s BackButtonDispatcher, which
+              //listens to the platform pop route notifications. When the user
+              //taps the Android system Back button, it triggers the router
+              //delegate’s onPopPage callback.
+              backButtonDispatcher: RootBackButtonDispatcher(),
             ),
           );
         },

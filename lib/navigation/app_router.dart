@@ -65,13 +65,42 @@ class AppRouter extends RouterDelegate
       // Declares pages, the stack of pages that describes your navigation stack
       pages: [
         if (!appStateManager.isInitialized) SplashScreen.page(),
-        // TODO: Add LoginScreen
-        // TODO: Add OnboardingScreen
-        // TODO: Add Home
-        // TODO: Create new item
-        // TODO: Select GroceryItemScreen
-        // TODO: Add Profile Screen
-        // TODO: Add WebView Screen
+        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
+          LoginScreen.page(),
+        if (appStateManager.isLoggedIn && !appStateManager.isOnboardingComplete)
+          OnboardingScreen.page(),
+        if (appStateManager.isOnboardingComplete)
+          Home.page(appStateManager.getSelectedTab),
+        // Checks if the user is creating a new grocery item.
+        if (groceryManager.isCreatingNewItem)
+          // If so, shows the Grocery Item screen.
+          GroceryItemScreen.page(
+            onCreate: (item) {
+              // Once the user saves the item, updates the grocery list.
+              groceryManager.addItem(item);
+            },
+            onUpdate: (item, index) {
+              // onUpdate only gets called when the user updates an existing
+              // item. So now it's empty
+            },
+          ),
+        // Checks to see if a grocery item is selected.
+        if (groceryManager.selectedIndex != -1)
+          // If so, creates the Grocery Item screen page.
+          GroceryItemScreen.page(
+              item: groceryManager.selectedGroceryItem,
+              index: groceryManager.selectedIndex,
+              onUpdate: (item, index) {
+                // When the user changes and saves an item, it updates the item
+                //at the current index.
+                groceryManager.updateItem(item, index);
+              },
+              onCreate: (_) {
+                // onCreate only gets called when the user adds a new item.
+              }),
+        if (profileManager.didSelectUser)
+          ProfileScreen.page(profileManager.getUser),
+        if (profileManager.didTapOnRaywenderlich) WebViewScreen.page(),
       ],
     );
   }
@@ -92,10 +121,26 @@ class AppRouter extends RouterDelegate
     // If the route pop succeeds, this checks the different routes and triggers
     //the appropriate state changes.
 
-    // TODO: Handle Onboarding and splash
-    // TODO: Handle state when user closes grocery item screen
-    // TODO: Handle state when user closes profile screen
-    // TODO: Handle state when user closes WebView screen
+    // If the user taps the Back button from the Onboarding screen, it calls
+    //logout(). This resets the entire app state and the user has to log in agai
+    if (route.settings.name == FooderlichPages.onboardingPath) {
+      appStateManager.logout();
+    }
+
+    // Handle state if user rejects changes in the grocery item
+    if (route.settings.name == FooderlichPages.groceryItemDetails) {
+      groceryManager.groceryItemTapped(-1);
+    }
+    // Handle state when user closes profile screen ???
+    if (route.settings.name == FooderlichPages.profilePath) {
+      profileManager.tapOnProfile(false);
+    }
+
+    // Handle state when user closes WebView screen
+    if (route.settings.name == FooderlichPages.raywenderlich) {
+      profileManager.tapOnRaywenderlich(false);
+    }
+
     // 6
     return true;
   }
