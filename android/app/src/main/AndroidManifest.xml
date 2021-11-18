@@ -37,7 +37,7 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <!-- Deep linking -->
+            <!-- Deep linking here -->
             <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
             <intent-filter>
             <action android:name="android.intent.action.VIEW" />
