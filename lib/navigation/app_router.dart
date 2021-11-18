@@ -93,9 +93,37 @@ class AppRouter extends RouterDelegate<AppLink>
     return true;
   }
 
-  // TODO: Convert app state to applink
+  AppLink getCurrentPath() {
+    // If the user hasn’t logged in, return the app link with the login path.
+    if (!appStateManager.isLoggedIn) {
+      return AppLink(location: AppLink.kLoginPath);
+      // If the user hasn’t completed onboarding, return the app link with the
+      //onboarding path.
+    } else if (!appStateManager.isOnboardingComplete) {
+      return AppLink(location: AppLink.kOnboardingPath);
+      // If the user taps the profile, return the app link with the profile path
+    } else if (profileManager.didSelectUser) {
+      return AppLink(location: AppLink.kProfilePath);
+      // If the user taps the + button to create a new grocery item, return the
+      //app link with the item path.
+    } else if (groceryManager.isCreatingNewItem) {
+      return AppLink(location: AppLink.kItemPath);
+      // If the user selected an existing item, return an app link with the item
+      //path and the item’s id.
+    } else if (groceryManager.selectedGroceryItem != null) {
+      final id = groceryManager.selectedGroceryItem?.id;
+      return AppLink(location: AppLink.kItemPath, itemId: id);
+      // If none of the conditions are met, default by returning to the home
+      //path with the selected tab.
+    } else {
+      return AppLink(
+          location: AppLink.kHomePath,
+          currentTab: appStateManager.getSelectedTab);
+    }
+  }
 
-  // TODO: Apply configuration helper
+  @override
+  AppLink get currentConfiguration => getCurrentPath();
 
   // You call setNewRoutePath() when a new route is pushed. It passes along an
   //AppLink. This is your navigation configuration.
