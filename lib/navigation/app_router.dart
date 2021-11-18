@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'app_link.dart';
 
 import '../models/models.dart';
 import '../screens/screens.dart';
 
-class AppRouter extends RouterDelegate //TODO: Add <AppLink>
-    with
-        ChangeNotifier,
-        PopNavigatorRouterDelegateMixin {
+class AppRouter extends RouterDelegate<AppLink>
+    with ChangeNotifier, PopNavigatorRouterDelegateMixin {
   @override
   final GlobalKey<NavigatorState> navigatorKey;
 
@@ -98,7 +97,41 @@ class AppRouter extends RouterDelegate //TODO: Add <AppLink>
 
   // TODO: Apply configuration helper
 
-  // TODO: Replace setNewRoutePath
+  // You call setNewRoutePath() when a new route is pushed. It passes along an
+  //AppLink. This is your navigation configuration.
   @override
-  Future<void> setNewRoutePath(configuration) async => null;
+  Future<void> setNewRoutePath(AppLink newLink) async {
+    // Use a switch to check every location.
+    switch (newLink.location) {
+      // If the new location is /profile, show the Profile screen.
+      case AppLink.kProfilePath:
+        profileManager.tapOnProfile(true);
+        break;
+      // Check if the new location starts with /item.
+      case AppLink.kItemPath:
+        // If itemId is not null, set the selected grocery item and show the
+        //Grocery Item screen.
+        final itemId = newLink.itemId;
+        if (itemId != null) {
+          groceryManager.setSelectedGroceryItem(itemId);
+        } else {
+          // If itemId is null, show an empty Grocery Item screen.
+          groceryManager.createNewItem();
+        }
+        // Hide the Profile screen.
+        profileManager.tapOnProfile(false);
+        break;
+      // If the new location is /home.
+      case AppLink.kHomePath:
+        // Set the currently selected tab.
+        appStateManager.goToTab(newLink.currentTab ?? 0);
+        // Make sure the Profile screen and Grocery Item screen are hidden.
+        profileManager.tapOnProfile(false);
+        groceryManager.groceryItemTapped(-1);
+        break;
+      // If the location does not exist, do nothing.
+      default:
+        break;
+    }
+  }
 }
