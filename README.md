@@ -1,16 +1,32 @@
-# starter
+# Flutter Scrollable Music
 
-A new Flutter project.
+practice with a Flutter Apprentice
 
-## Getting Started
+#### Flutter App Screenshots
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+> Music Tab
+<table>
+  <tr>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_1-1.png?raw=true" width=180 height=320></td>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_1-3.png?raw=true" width=180 height=320></td>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_1-4.png?raw=true" width=180 height=320></td>
+  </tr>
+</table>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> Recipes Tab
+<table>
+  <tr>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_2-1.png?raw=true" width=180 height=320></td>
+  </tr>
+</table>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> Grocery Tab
+<table>
+  <tr>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_3-1.png?raw=true" width=180 height=320></td>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_3-2.png?raw=true" width=180 height=320></td>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_3-3.png?raw=true" width=180 height=320></td>
+    <td><img src="https://github.com/bl1nkker/flutter-scrollable-music/blob/main/preview/preview_3-4.png?raw=true" width=180 height=320></td>
+  </tr>
+</table>
